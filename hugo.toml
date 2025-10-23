@@ -2,9 +2,12 @@ baseURL = "https://leeminhquang.github.io/blog-laptrinh/"
 languageCode = "vi"
 title = "Blog Lập Trình Mạng"
 theme = "PaperMod"
-pagination.pageSize = 10
+paginate = 10
 enableRobotsTXT = true
 
+# ------------------------------
+# MENU CHÍNH
+# ------------------------------
 [menu]
   [[menu.main]]
     identifier = "home"
@@ -24,28 +27,31 @@ enableRobotsTXT = true
     url = "/about/"
     weight = 3
 
+# ------------------------------
+# CÁC THIẾT LẬP CHUNG
+# ------------------------------
 [params]
+  author = "Lê Minh Quang"
+  description = "Sinh viên An ninh mạng | Lập trình mạng | AI ứng dụng"
   defaultTheme = "auto"
   ShowReadingTime = true
   ShowToc = true
   ShowBreadCrumbs = true
   ShowPostNavLinks = true
   ShowCodeCopyButtons = true
-  author = "Lê Minh Quang"
-  description = "Sinh viên An ninh mạng | Lập trình mạng | AI ứng dụng"
-  customCSS = [
-    "css/extended/professional.css"
-  ]
+  customCSS = ["css/extended/professional.css"]
 
   [params.assets]
     favicon = "/images/avatar.jpg"
     disableHLJS = false
 
-# Quan trọng: profileMode là BẢNG, không phải bool
+# ------------------------------
+# CẤU HÌNH PROFILE MODE (trang chủ dạng portfolio)
+# ------------------------------
 [params.profileMode]
   enabled = true
   title = "Blog Lập Trình Mạng"
-  subtitle = "Sinh viên An ninh mạng • Lập trình mạng • Java & JavaScript"
+  subtitle = "Sinh viên An ninh mạng • Lập trình mạng • Java & AI ứng dụng"
   imageUrl = "/images/avatar.jpg"
   imageTitle = "Ảnh đại diện"
   imageWidth = 160
@@ -59,9 +65,9 @@ enableRobotsTXT = true
     name = "Profile"
     url  = "/about/"
 
-[params]
-  customCSS = [
-    "css/extended/theme-pro.css",      # <— thêm dòng này
-    "css/extended/professional.css"    # (nếu vẫn dùng riêng cho trang About)
-  ]
-  customJS  = ["js/ux.js"]             # <— nếu dùng hiệu ứng reveal
+# ------------------------------
+# CẤU HÌNH MARKDOWN
+# ------------------------------
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
