@@ -1,0 +1,32 @@
+baseURL = "https://leeminhquang.github.io/"
+languageCode = "vi"
+title = "Blog Lập Trình Mạng"
+theme = "PaperMod"
+pagination.pageSize = 10
+
+
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowBreadCrumbs = true
+  ShowPostNavLinks = true
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/posts/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "profile"
+    name = "Profile"
+    url = "/about/"
+    weight = 3
+
