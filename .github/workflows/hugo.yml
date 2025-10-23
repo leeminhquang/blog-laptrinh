@@ -3,7 +3,6 @@ name: Deploy Hugo site to Pages
 on:
   push:
     branches: ["main"]
-  # Cho phép chạy thủ công
   workflow_dispatch:
 
 permissions:
@@ -17,15 +16,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: true    # tải theme
+          submodules: true
           fetch-depth: 0
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
           extended: true
-      - name: Build
-        run: hugo --minify
+      - name: Build with hugo.toml
+        run: hugo --minify --config hugo.toml
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
