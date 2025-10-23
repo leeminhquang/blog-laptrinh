@@ -1,0 +1,126 @@
+/* ========= PRO THEME for PaperMod ========= */
+/* Font hiện đại (tuỳ chọn) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+
+/* Màu & token */
+:root{
+  --pro-accent: #6EA8FF;    /* xanh dương “techy” */
+  --pro-accent-2: #9A6BFF;  /* tím tạo gradient */
+  --pro-bg: #0b1220;        /* nền tối sang */
+  --pro-card: rgba(255,255,255,.06);
+  --pro-border: rgba(255,255,255,.12);
+  --pro-shadow: 0 12px 30px rgba(0,0,0,.35);
+}
+
+/* Nền & container */
+body {
+  background: radial-gradient(1000px 700px at 20% -10%, rgba(110,168,255,.20), transparent 60%),
+              radial-gradient(900px 600px at 100% 0%, rgba(154,107,255,.18), transparent 60%),
+              var(--pro-bg) !important;
+}
+
+/* Header site title gradient */
+#header a.site-title, .post-title, h1, h2, h3 {
+  background: linear-gradient(90deg, var(--pro-accent), var(--pro-accent-2));
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+}
+
+/* Điều chỉnh heading mặc định cho hài hoà */
+h1 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; }
+h2 { font-size: clamp(22px, 3vw, 28px); font-weight: 800; }
+h3 { font-size: clamp(18px, 2.2vw, 22px); font-weight: 700; }
+
+/* Card glassmorphism cho mọi khối/chứa */
+.main, .post-entry, .page, .single, .archive-entry, .page-content,
+.list .post-entry, .not-found {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.post-content > *, .page-content > * {
+  background: var(--pro-card);
+  border: 1px solid var(--pro-border);
+  border-radius: 16px;
+  box-shadow: var(--pro-shadow);
+  padding: 16px 18px;
+  margin: 14px 0;
+}
+
+/* Các khối cụ thể không cần box */
+.post-content > h1, .post-content > h2, .post-content > h3,
+.page-content > h1, .page-content > h2, .page-content > h3 {
+  background: transparent;
+  border: 0; box-shadow: none; padding: 0; margin: 22px 0 10px;
+}
+
+/* Nút CTA đẹp */
+a.button, .btn, .post-tags a, .taxonomy-tag {
+  display:inline-block; text-decoration:none; font-weight:700;
+  padding: .6rem 1rem; border-radius:12px;
+  border: 2px solid var(--pro-accent);
+  color: var(--pro-accent);
+  transition: .25s;
+}
+a.button:hover, .btn:hover, .post-tags a:hover, .taxonomy-tag:hover {
+  background: linear-gradient(90deg, var(--pro-accent), var(--pro-accent-2));
+  color: #0b1220;
+  border-color: transparent;
+  transform: translateY(-1px);
+}
+
+/* Link inline */
+.post-content a, .page-content a { color: var(--pro-accent); border-bottom: 1px dashed rgba(110,168,255,.45); }
+.post-content a:hover, .page-content a:hover { border-bottom-style: solid; }
+
+/* Bảng (table) pro */
+.post-content table, .page-content table {
+  width: 100%; border-collapse: collapse; overflow: hidden;
+  border-radius: 14px; box-shadow: var(--pro-shadow);
+}
+.post-content thead th {
+  background: linear-gradient(90deg, rgba(110,168,255,.25), rgba(154,107,255,.25));
+  color: #E8F0FF; font-weight:800; border-bottom: 1px solid var(--pro-border);
+}
+.post-content th, .post-content td { padding: 12px 14px; border-bottom: 1px solid var(--pro-border); }
+.post-content tr:hover td { background: rgba(255,255,255,.03); }
+
+/* Code block (Chroma) nổi khối */
+.chroma, pre code, pre {
+  background: #0c1529 !important;
+  border: 1px solid var(--pro-border); border-radius: 12px !important;
+  box-shadow: var(--pro-shadow);
+}
+code { background: rgba(255,255,255,.06); padding:2px 6px; border-radius:6px; }
+
+/* Blockquote */
+blockquote {
+  border-left: 4px solid var(--pro-accent);
+  background: rgba(110,168,255,.08);
+  border-radius: 12px;
+}
+
+/* Search box (PaperMod) */
+#searchbox input { background:#0f1830; border:1px solid var(--pro-border); }
+#searchbox input:focus { outline: 2px solid rgba(110,168,255,.45); }
+
+/* List page: bài viết (archive) */
+.post-entry { background: var(--pro-card) !important; border:1px solid var(--pro-border) !important;
+  border-radius:16px !important; box-shadow: var(--pro-shadow) !important; }
+.post-entry:hover { transform: translateY(-2px); }
+
+/* Badges kỹ năng nhỏ */
+.badge { background:#0f1830; border:1px solid var(--pro-border); padding:6px 10px; border-radius:999px; }
+.badge .dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:6px;
+  background: linear-gradient(90deg, var(--pro-accent), var(--pro-accent-2));}
+
+/* Avatar tròn to + viền phát sáng */
+.avatar {
+  width: 210px; height: 210px; border-radius: 50%; object-fit: cover;
+  border: 4px solid var(--pro-accent);
+  box-shadow: 0 0 0 8px rgba(110,168,255,.12), 0 10px 30px rgba(0,0,0,.35);
+}
+
+/* Reveal animation (kết hợp JS bên dưới) */
+.reveal { opacity:0; transform: translateY(10px); transition: .6s ease; }
+.reveal.is-visible { opacity:1; transform: none; }

@@ -58,3 +58,10 @@ enableRobotsTXT = true
   [[params.profileMode.buttons]]
     name = "Profile"
     url  = "/about/"
+
+[params]
+  customCSS = [
+    "css/extended/theme-pro.css",      # <— thêm dòng này
+    "css/extended/professional.css"    # (nếu vẫn dùng riêng cho trang About)
+  ]
+  customJS  = ["js/ux.js"]             # <— nếu dùng hiệu ứng reveal
