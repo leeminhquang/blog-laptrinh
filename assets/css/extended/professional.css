@@ -1,0 +1,55 @@
+:root {
+  --accent: #0078ff;
+  --bg-dark: #0d1117;
+  --card: rgba(255,255,255,0.03);
+  --radius: 14px;
+}
+
+/* Hero */
+.hero-pro {
+  display:flex; align-items:center; gap:2rem; flex-wrap:wrap;
+  padding:2rem; background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:0 8px 24px rgba(0,0,0,0.25);
+}
+.hero-pro img {
+  width:160px; height:160px; border-radius:50%; object-fit:cover;
+  border:3px solid var(--accent);
+}
+.hero-pro .text h1 {
+  font-size:2rem; margin-bottom:.5rem;
+}
+.hero-pro .text p { opacity:.85; margin-bottom:.5rem; }
+.hero-pro .social a {
+  margin-right:8px; text-decoration:none; font-weight:600;
+  color:var(--accent);
+}
+.hero-pro .social a:hover { text-decoration:underline; }
+
+/* Cards */
+.card-pro {
+  background:var(--card); border-radius:var(--radius);
+  padding:1.5rem; margin-top:1.5rem;
+  box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Grid for skills */
+.skills-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1rem;
+}
+.skill-item { background:#111; border-radius:10px; padding:1rem; }
+.skill-item .bar {
+  background:#333; border-radius:999px; height:8px; margin-top:.5rem; overflow:hidden;
+}
+.skill-item .bar span {
+  display:block; height:100%; background:var(--accent);
+}
+
+/* Quote */
+.quote-pro {
+  margin-top:2rem; text-align:center;
+  font-style:italic; opacity:.8;
+  border-left:4px solid var(--accent);
+  padding-left:1rem;
+}
