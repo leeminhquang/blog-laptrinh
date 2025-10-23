@@ -2,8 +2,10 @@ baseURL = "https://leeminhquang.github.io/blog-laptrinh/"
 languageCode = "vi"
 title = "Blog Lập Trình Mạng"
 theme = "PaperMod"
-paginate = 10
 enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
 
 [menu]
   [[menu.main]]
@@ -11,52 +13,47 @@ enableRobotsTXT = true
     name = "Home"
     url = "/"
     weight = 1
-
   [[menu.main]]
     identifier = "blog"
     name = "Blog"
     url = "/posts/"
     weight = 2
-
   [[menu.main]]
     identifier = "profile"
     name = "Profile"
     url = "/about/"
     weight = 3
 
-
 [params]
   author = "Lê Minh Quang"
   description = "Sinh viên An ninh mạng | Lập trình mạng | AI ứng dụng"
   defaultTheme = "auto"
   ShowReadingTime = true
+  ShowToc = true
   ShowBreadCrumbs = true
   ShowPostNavLinks = true
   ShowCodeCopyButtons = true
-  ShowToc = true
-  customCSS = ["css/extended/professional.css"]
+  customCSS = ["css/extended/theme-pro.css", "css/extended/professional.css"]
+  customJS  = ["js/ux.js"]
 
   [params.assets]
     favicon = "/images/avatar.jpg"
     disableHLJS = false
 
-  [params.profileMode]
-    enabled = true
-    title = "Lê Minh Quang"
-    subtitle = "Sinh viên An ninh mạng • Lập trình mạng • AI ứng dụng"
-    imageUrl = "/images/avatar.jpg"
-    imageTitle = "Ảnh đại diện"
-    imageWidth = 160
-    imageHeight = 160
-
-    [[params.profileMode.buttons]]
-      name = "Bài viết"
-      url  = "/posts/"
-
-    [[params.profileMode.buttons]]
-      name = "Hồ sơ"
-      url  = "/about/"
-
+[params.profileMode]
+  enabled = true
+  title = "Blog Lập Trình Mạng"
+  subtitle = "Sinh viên An ninh mạng • Lập trình mạng • Java & AI ứng dụng"
+  imageUrl = "/images/avatar.jpg"
+  imageTitle = "Ảnh đại diện"
+  imageWidth = 160
+  imageHeight = 160
+  [[params.profileMode.buttons]]
+    name = "Blog"
+    url  = "/posts/"
+  [[params.profileMode.buttons]]
+    name = "Profile"
+    url  = "/about/"
 
 [markup]
   [markup.goldmark.renderer]
