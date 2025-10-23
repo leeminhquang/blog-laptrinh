@@ -2,34 +2,28 @@ baseURL = "https://leeminhquang.github.io/blog-laptrinh/"
 languageCode = "vi"
 title = "Blog Lập Trình Mạng"
 theme = "PaperMod"
-paginate = 10
 enableRobotsTXT = true
 
-# ------------------------------
-# MENU CHÍNH
-# ------------------------------
+[pagination]
+  pagerSize = 10
+
 [menu]
   [[menu.main]]
     identifier = "home"
     name = "Home"
     url = "/"
     weight = 1
-
   [[menu.main]]
     identifier = "blog"
     name = "Blog"
     url = "/posts/"
     weight = 2
-
   [[menu.main]]
     identifier = "profile"
     name = "Profile"
     url = "/about/"
     weight = 3
 
-# ------------------------------
-# CÁC THIẾT LẬP CHUNG
-# ------------------------------
 [params]
   author = "Lê Minh Quang"
   description = "Sinh viên An ninh mạng | Lập trình mạng | AI ứng dụng"
@@ -39,15 +33,13 @@ enableRobotsTXT = true
   ShowBreadCrumbs = true
   ShowPostNavLinks = true
   ShowCodeCopyButtons = true
-  customCSS = ["css/extended/professional.css"]
+  customCSS = ["css/extended/theme-pro.css", "css/extended/professional.css"]
+  customJS  = ["js/ux.js"]
 
   [params.assets]
     favicon = "/images/avatar.jpg"
     disableHLJS = false
 
-# ------------------------------
-# CẤU HÌNH PROFILE MODE (trang chủ dạng portfolio)
-# ------------------------------
 [params.profileMode]
   enabled = true
   title = "Blog Lập Trình Mạng"
@@ -56,18 +48,13 @@ enableRobotsTXT = true
   imageTitle = "Ảnh đại diện"
   imageWidth = 160
   imageHeight = 160
-
   [[params.profileMode.buttons]]
     name = "Blog"
     url  = "/posts/"
-
   [[params.profileMode.buttons]]
     name = "Profile"
     url  = "/about/"
 
-# ------------------------------
-# CẤU HÌNH MARKDOWN
-# ------------------------------
 [markup]
   [markup.goldmark.renderer]
     unsafe = true
