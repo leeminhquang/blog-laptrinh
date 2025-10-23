@@ -3,13 +3,32 @@ languageCode = "vi"
 title = "Blog Lập Trình Mạng"
 theme = "PaperMod"
 pagination.pageSize = 10
-
+enableRobotsTXT = true
 
 [params]
+  # Giao diện & tiện ích
   defaultTheme = "auto"
   ShowReadingTime = true
   ShowBreadCrumbs = true
   ShowPostNavLinks = true
+  ShowToc = true
+  ShowCodeCopyButtons = true
+  profileMode = true
+
+  # Thông tin
+  author = "Lê Minh Quang"
+  description = "Sinh viên An ninh mạng | Lập trình mạng | AI ứng dụng"
+
+  # Tài nguyên
+  customCSS = [
+    "css/extended/professional.css",
+    "css/extended/profile.css",
+    "css/extended/portfolio.css"
+  ]
+
+  [params.assets]
+    favicon = "/images/avatar.jpg"
+    disableHLJS = false
 
 [menu]
   [[menu.main]]
@@ -29,4 +48,3 @@ pagination.pageSize = 10
     name = "Profile"
     url = "/about/"
     weight = 3
-
