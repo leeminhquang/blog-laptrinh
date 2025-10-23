@@ -1,0 +1,27 @@
+/* cards + grid */
+.profile-grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
+@media (min-width: 768px){ .profile-grid { grid-template-columns: 1fr 1fr; } }
+.card { background: var(--entry); border-radius: 16px; padding: 18px; box-shadow: 0 6px 18px rgba(0,0,0,.08); }
+
+.avatar { width: 140px; height:140px; border-radius: 50%; object-fit: cover; box-shadow: 0 6px 18px rgba(0,0,0,.25); }
+
+.btns { display:flex; gap:10px; flex-wrap:wrap; margin:12px 0 4px; }
+.btn {
+  padding: 8px 12px; border-radius: 10px; text-decoration:none; font-weight:600;
+  background: var(--tertiary); color: var(--primary);
+  border: 1px solid var(--border);
+}
+.btn:hover { filter: brightness(1.05); }
+
+/* badges */
+.badge { display:inline-block; background: var(--code-bg); padding:4px 8px; border-radius:999px; margin:3px 6px 0 0; font-size:.9rem; }
+
+/* progress bars (skills) */
+.skill { margin:10px 0; }
+.skill .name { display:flex; justify-content:space-between; font-weight:600; }
+.bar { height:10px; border-radius:999px; background: var(--border); overflow:hidden; }
+.bar > span { display:block; height:100%; background: var(--primary); opacity:.85; }
+
+/* compact list */
+.ul-compact { margin:0; padding-left:18px; }
+.ul-compact li { margin:4px 0; }
